@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Story Builder</title>
+</head>
+<body>
+    <h1 id="sentence1"></h1>
+    <p id="sentence2"></p>
+    
+    <script>
+        // Create your variables here
+        let character = "Captain Rex";
+        let place = "Mars base";
+        let item = "data chip";
+        let action = "investigated";
+        
+        // Use + to concatenate (join strings together) and display in h1
+        let firstSentence = character + " arrived at the abandoned " + place + ".";
+        document.getElementById('sentence1').textContent = firstSentence;
+        
+        // Use template literals with ${} and display in p
+        let secondSentence = `He carefully ${action} a mysterious ${item} on the ground.`;
+        document.getElementById('sentence2').textContent = secondSentence;
+    </script>
+</body>
+</html>
