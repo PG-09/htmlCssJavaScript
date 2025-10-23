@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Const vs Let</title>
+</head>
+<body>
+    <h1>Understanding Const and Let</h1>
+    <p>Open the browser console (F12) and try uncommenting the line that attempts to change <code>birthYear</code> to see the **TypeError**.</p>
+    <div id="output"></div>
+    
+    <script>
+        // Use const for values that won't change
+        const birthYear = 2005;  // Your birth year never changes
+        const hometown = "Springfield";  // Where you were born doesn't change
+        const schoolName = "Central High";
+        
+        // Use let for values that will change
+        let currentYear = 2025;  // The year keeps changing
+        let age = 20;  // Your age changes every year
+        let grade = 10;  // Your grade changes
+        
+        
+        // Change the let variables (reassignment is fine)
+        currentYear = 2026; // The year moves forward
+        age = 21;           // The age is updated
+        grade = 11;         // The grade is updated
+        
+        // Display the information using a template literal
+        let info = `
+            <p><strong>Birth Year:</strong> ${birthYear} (const - cannot change)</p>
+            <p><strong>Hometown:</strong> ${hometown} (const - cannot change)</p>
+            <p><strong>Current Year:</strong> ${currentYear} (let - CHANGED)</p>
+            <p><strong>Current Age:</strong> ${age} (let - CHANGED)</p>
+            <p><strong>Current Grade:</strong> ${grade} (let - CHANGED)</p>
+        `;
+        
+        document.getElementById('output').innerHTML = info;
+        
+        console.log("--- Console Log ---");
+        console.log("Birth Year (const):", birthYear);
+        console.log("Current Age (let, after change):", age);
+        console.log("Current Grade (let, after change):", grade);
+    </script>
+</body>
+</html>
