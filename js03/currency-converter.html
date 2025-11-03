@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+           
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        .converter {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        .amount {
+            font-size: 28px;
+            color: #764ba2;
+            text-align: center;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .conversion {
+            font-size: 18px;
+            padding: 10px 15px;
+            margin: 12px 0;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.2s;
+            border-left: 5px solid #667eea;
+        }
+        .conversion:hover {
+            transform: translateX(5px);
+            background-color: #f1f2f3;
+        }
+        .currency-label {
+            font-weight: 600;
+        }
+        .value {
+            font-family: 'Courier New', monospace;
+            color: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <div class="converter">
+        <h1>Global Currency Exchange</h1>
+        <div class="amount" id="usd"></div>
+        
+       
+        <p class="conversion" id="euro">
+            <span class="currency-label">Euros (EUR)</span>
+            <span class="value"></span>
+        </p>
+        <p class="conversion" id="pound">
+            <span class="currency-label">British Pounds (GBP)</span>
+            <span class="value"></span>
+        </p>
+        <p class="conversion" id="yen">
+            <span class="currency-label">Japanese Yen (JPY)</span>
+            <span class="value"></span>
+        </p>
+        <p class="conversion" id="cad">
+            <span class="currency-label">Canadian Dollars (CAD)</span>
+            <span class="value"></span>
+        </p>
+    </div>
+    
+    <script>
+        // Starting amount in USD
+        let usdAmount = 100;
+        
+        // Conversion rates 
+        let euroRate = 0.92;
+        let poundRate = 0.79;
+        let yenRate = 149.50;
+        let cadRate = 1.36;
+        
+        // Helper function to update the display
+        function updateDisplay(id, symbol, value) {
+            // Find the span with class 'value' inside the conversion P tag
+            document.getElementById(id).querySelector('.value').textContent = `${symbol}${value.toLocaleString('en-US', { minimumFractionDigits: 2 })}`;
+        }
+
+        // Display USD amount
+        document.getElementById('usd').textContent = `$${usdAmount.toFixed(2)} USD equals:`;
+        
+        // --- 1. Convert to Euros ---
+        let euros = usdAmount * euroRate;
+        updateDisplay('euro', '€', euros.toFixed(2));
+        
+        // --- 2. Convert to British Pounds (Completion) ---
+        let pounds = usdAmount * poundRate;
+        updateDisplay('pound', '£', pounds.toFixed(2));
+        
+        // --- 3. Convert to Japanese Yen (Completion) ---
+        let yen = usdAmount * yenRate;
+        
+        updateDisplay('yen', '¥', yen.toFixed(2)); 
+        
+        // --- 4. Convert to Canadian Dollars (Completion) ---
+        let cad = usdAmount * cadRate;
+        updateDisplay('cad', '$', cad.toFixed(2));
+
+        // Log to console for verification
+        console.log(`USD: ${usdAmount}`);
+        console.log(`EUR: ${euros.toFixed(2)}`);
+        console.log(`GBP: ${pounds.toFixed(2)}`);
+        console.log(`JPY: ${yen.toFixed(2)}`);
+        console.log(`CAD: ${cad.toFixed(2)}`);
+
+    </script>
+</body>
+</html>

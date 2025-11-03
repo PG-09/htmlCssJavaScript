@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Score Tracker</title>
+</head>
+<body>
+    <h1>Game Score Tracker</h1>
+    
+    <p id="start"></p>
+    <p id="point1"></p>
+    <p id="point2"></p>
+    <p id="point3"></p>
+    <p id="point4"></p>
+    <p id="point5"></p>
+    <p id="penalty1"></p>
+    <p id="penalty2"></p>
+    <p id="final"></p>
+    
+    <script>
+        // Starting score
+        let score = 0;
+        document.getElementById('start').textContent = `Starting score: ${score}`; // Score is 0
+        
+        // --- Increase score 5 times (Points) ---
+        
+        // Point 1
+        score++;
+        document.getElementById('point1').textContent = `After point 1: ${score}`; // Score is 1
+        
+        // Point 2
+        score++;
+        document.getElementById('point2').textContent = `After point 2: ${score}`; // Score is 2
+        
+        // Point 3 (Your completion)
+        score++;
+        document.getElementById('point3').textContent = `After point 3: ${score}`; // Score is 3
+        
+        // Point 4 (Your completion)
+        score++;
+        document.getElementById('point4').textContent = `After point 4: ${score}`; // Score is 4
+        
+        // Point 5 (Your completion)
+        score++;
+        document.getElementById('point5').textContent = `After point 5: ${score}`; // Score is 5
+        
+        // --- Decrease score 2 times (Penalties) ---
+
+        // Penalty 1
+        score--;
+        document.getElementById('penalty1').textContent = `After penalty 1: ${score}`; // Score is 4
+        
+        // Penalty 2 (Your completion)
+        score--;
+        document.getElementById('penalty2').textContent = `After penalty 2: ${score}`; // Score is 3
+        
+        // Display final
+        document.getElementById('final').textContent = `Final Score: ${score}`;
+    </script>
+</body>
+</html>
