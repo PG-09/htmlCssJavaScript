@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Content Changer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .highlight {
+            background-color: #fff9c4;
+            padding: 10px;
+            border-left: 4px solid #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1 id="title">Original Title</h1>
+        <p id="description">Original description text.</p>
+        <p id="info">Original info text.</p>
+    </div>
+    
+    <script>
+        // 1. Select elements by their ID (Keep this the same)
+        let titleElement = document.getElementById('title');
+        let descElement = document.getElementById('description');
+        let infoElement = document.getElementById('info');
+        
+        // 2. Change the text to something different
+        titleElement.textContent = 'DOM Manipulation Mastered! ✨';
+        descElement.textContent = 'This is the new, unique description after the JavaScript ran.';
+        
+        // 3. Use innerHTML with new HTML content
+        infoElement.innerHTML = 'New content with a <span style="color: purple;">**purple span**</span> and a <br>line break.';
+        
+      
+        titleElement.style.color = 'rgb(76, 175, 80)'; // A nice Google green
+        
+        // 5. Add more style changes (fontSize, backgroundColor)
+        
+        descElement.style.fontSize = '1.1em';
+        
+        // Change the background color of the 'info' paragraph
+        infoElement.style.backgroundColor = '#e3f2fd'; 
+        infoElement.style.padding = '15px'; 
+        infoElement.style.borderRadius = '5px';
+        
+        
+        titleElement.classList.add('highlight'); 
+        
+        // Log to console (Keep this the same)
+        console.log('All content and styles successfully updated with new experiments!');
+    </script>
+</body>
+</html>

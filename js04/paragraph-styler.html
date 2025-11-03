@@ -1,0 +1,59 @@
+Create 5 paragraphs with the same class
+Use querySelectorAll() to select all of them at once
+Style different paragraphs by their index position
+Starter Code:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paragraph Styler</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        
+        .highlight {
+            background-color: #ffeb3b;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multi-Element Selection</h1>
+    
+    <p class="text">Paragraph 1 - This will be blue</p>
+    <p class="text">Paragraph 2 - This stays normal</p>
+    <p class="text">Paragraph 3 - This will be highlighted (middle)</p>
+    <p class="text">Paragraph 4 - This stays normal</p>
+    <p class="text">Paragraph 5 - This will be red</p>
+    
+    <script>
+        // Select ALL elements with class "text"
+        let paragraphs = document.querySelectorAll('.text');
+        
+        // Log how many were found
+        console.log('Number of paragraphs:', paragraphs.length);
+        
+        // Change first paragraph to blue
+        paragraphs[0].style.color = 'blue';
+        
+        // Change last paragraph to red
+        // Hint: Use paragraphs.length - 1 to get the last index
+        paragraphs[paragraphs.length - 1].style.color = 'red';
+        
+        // Add highlight class to middle paragraph (index 2)
+        // Your code here...
+        
+        console.log('Paragraphs styled!');
+    </script>
+</body>
+</html>
+Key Concepts:
+querySelectorAll() returns a list (NodeList) of elements
+Access elements by index: paragraphs[0], paragraphs[1], etc.
+First element is at index 0
+Last element is at index paragraphs.length - 1
+Middle element (of 5) is at index 2

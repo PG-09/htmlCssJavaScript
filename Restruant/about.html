@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Culinary Corner - About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-50 text-gray-800;
+        }
+        .nav-link.active {
+            @apply text-white bg-green-600;
+        }
+    </style>
+</head>
+<body class="selection:bg-green-200 selection:text-green-900">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <h1 class="text-3xl font-bold text-green-700">The Culinary Corner</h1>
+            <div class="mt-4 sm:mt-0 flex gap-2 sm:gap-4">
+                <a href="index.html" class="nav-link px-4 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-200">Home</a>
+                <a href="menu.html" class="nav-link px-4 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-200">Menu</a>
+                <a href="about.html" class="nav-link px-4 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-200 active">About</a>
+                <a href="contact.html" class="nav-link px-4 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-200">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 py-8">
+
+        <!-- About Page -->
+        <section id="about">
+            <h2 class="text-4xl font-bold text-center text-green-700 mb-8">Our Amazing Chef Fabrizio Bianchi!
+            </h2>
+
+            <img src="https://copilot.microsoft.com/th/id/BCO.696b9de2-a1df-47dc-94a5-b1b230134749.png" width="1500">
+            
+            <h2 class="text-4xl font-bold text-center text-green-700 mb-8">And Our Story!</h2>
+            <div class="bg-white rounded-xl shadow-lg p-8 sm:p-12 text-center max-w-4xl mx-auto">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Founded in 2018, The Culinary Corner was born from a passion for bringing people together through delicious, honest food. Our chefs meticulously select locally-sourced ingredients to create dishes that are both comforting and exciting. We believe that every meal is an opportunity to create a memorable experience.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Our commitment extends beyond the plate. We strive to foster a warm and welcoming atmosphere where every guest feels like family. Come and share a meal with us—we can't wait to serve you! and also 
+                    Gordon Ramsay was here.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 The Culinary Corner. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
