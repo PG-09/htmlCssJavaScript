@@ -1,0 +1,78 @@
+h1 {
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+    font-size: 2.5em;
+    text-align: center;
+ }
+
+ h2 {
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+    font-size: 2.5em;
+    text-align: center;
+ }
+ p {
+   font-family: Georgia, serif;
+   font-size: 16px;
+   line-height: 1.5;
+   color: rgb(28, 51, 255)
+}
+body {
+   margin: 0;
+   padding: 20px;
+   background-color: #79b8fc;
+}
+
+
+.star-trek-insignia{
+   font-family: 'Montserrat', sans-serif;
+   font-size: 3em;
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: 0.1em;
+   color: #c9e6ff;
+   background: linear-gradient(135deg, #0f4c81, #2c77a3, #4391c4);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+ }
+
+ 
+.star-trek-insignia_small {
+   font-family: 'Montserrat', sans-serif;
+   font-size: 1.5em;
+   font-weight: 400;
+   letter-spacing: 0.1em;
+   color: #c9e6ff;
+   background: linear-gradient(135deg, #0f4c81, #2c77a3, #4391c4);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+ }
+ .star-trek-insignia_fav{
+   font-family: 'Montserrat', sans-serif;
+   font-size: 2em;
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: 0.1em;
+   color: rgb(38, 0, 255);
+   background: linear-gradient(135deg, #ff0000, #2c77a3, #4391c4);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+ }
+
+ .star-trek-insignia_Name{
+   font-family: 'Montserrat', sans-serif;
+   font-size: 2em;
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: 0.1em;
+   color: rgb(207, 97, 97);
+   background: linear-gradient(135deg, rgb(0, 255, 21), #2c77a3, #4391c4);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+ }
+
+ 
