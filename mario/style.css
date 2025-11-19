@@ -1,0 +1,129 @@
+body {
+    background-color: #0d0d1e;
+    color: #e0f7fa;
+    font-family: 'VT323', monospace;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            #1a1a3a,
+            #1a1a3a 1px,
+            #0d0d1e 1px,
+            #0d0d1e 50px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            #1a1a3a,
+            #1a1a3a 1px,
+            #0d0d1e 1px,
+            #0d0d1e 50px
+        );
+    background-size: 50px 50px;
+    animation: neon-pulse 10s infinite;
+}
+
+@keyframes neon-pulse {
+    0% { background-color: #0d0d1e; }
+    50% { background-color: #0f0f22; }
+    100% { background-color: #0d0d1e; }
+}
+
+.header {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid #00ffff;
+    box-shadow: 0 0 15px #00ffff;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2em;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+    animation: neon-glow-h1 1.5s infinite alternate;
+}
+
+@keyframes neon-glow-h1 {
+    from { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; }
+    to { text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; }
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(13, 13, 30, 0.7);
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px #00ffff, inset 0 0 10px #00ffff;
+    border-radius: 5px;
+}
+
+.image-container {
+    text-align: center;
+    padding: 20px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #f0f;
+    box-shadow: 0 0 15px #f0f, inset 0 0 10px #f0f;
+}
+
+.story-content {
+    padding: 20px;
+}
+
+p, li {
+    color: #e0f7fa;
+    text-shadow: 0 0 5px #fff;
+}
+
+strong {
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+li::before {
+    content: '▶';
+    color: #f0f;
+    position: absolute;
+    left: 0;
+    text-shadow: 0 0 5px #f0f;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8em;
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
+    border-top: 2px solid #00ffff;
+    margin-top: 40px;
+    box-shadow: 0 0 15px #00ffff;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .container {
+        margin: 20px;
+        padding: 10px;
+    }
+}
